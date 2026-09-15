@@ -1,0 +1,26 @@
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("hello!")
+
+	var hello string = "Hello world"
+	fmt.Println(hello) 
+
+	hello = "Hello Go"
+	fmt.Println(hello) 
+
+	hello = "Go Go Go"
+	fmt.Println(hello) 
+
+	var (
+		name string = "michael"
+		age  int    = 22
+	)
+
+	fmt.Println(name) 
+
+	name2 := "Michael"
+	fmt.Println(name2)
+}
