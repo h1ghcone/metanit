@@ -15,4 +15,14 @@ func main() {
 	h++
 	g--
 	fmt.Println(h, g)
+    
+    var l int = 6
+	var m int = 8
+	var v bool = l < m
+	fmt.Println(v)
+	var p bool = 3 < 4 && 3 > 4
+	fmt.Println(p)
+	var u bool = 3 < 4 || 3 > 4
+	fmt.Println(u)
+}
 }
