@@ -1,0 +1,38 @@
+package main
+
+import "fmt"
+
+func main() {
+  var numbers [5]int = [5]int{1, 2, 3, 4, 5}
+  fmt.Println(numbers[0])
+  fmt.Println(numbers[2])
+
+  numbers[0] = 87
+  fmt.Println(numbers[0])
+
+  colors := [4]string{0: "green", 1: "blue", 2: "red", 3: "orange"}
+  fmt.Println(colors[3])
+
+  big_massiv := [3][4]int{
+    {1, 2, 3, 4},
+    {8, 9, 10, 12},
+    {15, 24, 54, 77},
+  }
+  fmt.Println(big_massiv)
+  fmt.Println("numbers lenght:", len(numbers))
+  fmt.Println("big_massiv lenght:", len(big_massiv))
+
+  massiv1 := [3]int{4, 5, 7}
+  massiv2 := [3]int{3, 5, 7}
+  massiv3 := [3]int{4, 5, 7}
+  fmt.Println("massiv1==massiv2:", massiv1 == massiv2)
+  fmt.Println("massiv1==massiv3:", massiv1 == massiv3)
+
+  nums1 := [4]int{4, 5, 7, 9}
+  nums2 := nums1
+  fmt.Println(nums2)
+
+  nums2[3] = 11
+  fmt.Println(nums1, "\n", nums2)
+
+}
