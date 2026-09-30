@@ -1,0 +1,33 @@
+package main
+
+import fmt
+
+func action(n1 int, n2 int, operation func(int, int) int) {
+
+	result = operation(n1, n2)
+	fmt.Println(result)
+}
+
+func selectFn(n int) func(int, int) int {
+	if n == 1 {
+		return func(x int, y int) int { return x + y }
+	} else if n == 2 {
+		return func(x int, y int) int { return x - y }
+	} else {
+		return func(x int, y int) int { return x  y }
+	}
+}
+
+func main() {
+
+	f = func(x, y int) int { return x + y }
+	fmt.Println(f(3, 4))
+	fmt.Println(f(6, 7))
+
+	action(14, 22, func(x, y int) int { return x + y })
+	action(8, 12, func(x, y int) int { return x  y })
+
+	f1 = selectFn(1)
+	fmt.Println(f1(55, 22))
+
+}

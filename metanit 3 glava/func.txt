@@ -1,0 +1,27 @@
+package main
+
+import "fmt"
+
+func main() {
+	welcome()
+	sum(5, 8, 11)
+	sumfloat(4.4, 5.3, 11.2)
+	sum([]int{12, 23, 43}...)
+
+}
+func welcome() {
+	fmt.Println("Welcome to my git")
+}
+
+func sum(num ...int) {
+	var sum = 0
+	for _, num := range num {
+		sum += num
+	}
+
+	fmt.Println("summa =", sum)
+}
+func sumfloat(x, y, z float64) {
+	var e = x + y + z
+	fmt.Println("x + y + z =", e)
+}

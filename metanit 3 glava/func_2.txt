@@ -1,0 +1,33 @@
+package main
+
+import "fmt"
+
+func add(x int, y int) int {
+	return x + y
+}
+
+func multiply(x int, y int) int { return x * y }
+
+func action(x1 int, y1 int, operation func(int, int) int) {
+	result := operation(x1, y1)
+	fmt.Println(result)
+}
+
+func main() {
+
+	var f func(int, int) int = add
+	fmt.Println(f(6, 7))
+
+	var x = f(5, 7) 
+	fmt.Println(x)
+
+	b := add
+	fmt.Println(b(3, 8))
+
+	b = multiply
+	fmt.Println(b(4, 6))
+
+	action(100, 250, add)
+	action(50, 90, multiply)
+
+}
