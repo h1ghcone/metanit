@@ -1,0 +1,35 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	var x int = 4
+	var p *int = &x
+	fmt.Println("адрес:", p)
+	fmt.Println("значение:", *p)
+
+	*p = 99
+	fmt.Println(x)
+
+	s := new(float64)
+	fmt.Println(*s)
+	*s = 100.001
+	fmt.Println(*s)
+
+	var p2 **int = &p
+	fmt.Println("адрес p2:", p2)
+	fmt.Println("адрес p:", *p2)
+	fmt.Println("значение p:", **p2)
+
+	var a, b, c int = 23, 12, 55
+	massiv := [4]*int{&a, &b, nil, &c}
+
+	fmt.Println(massiv)
+
+	for _, e := range massiv {
+		if e != nil {
+			fmt.Println(*e)
+		}
+	}
+}
