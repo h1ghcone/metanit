@@ -1,0 +1,36 @@
+package main
+
+import "fmt"
+
+type BinaryOp func(int, int) int
+
+func action(n1 int, n2 int, op BinaryOp) {
+
+	result := op(n1, n2)
+	fmt.Println(result)
+}
+
+func add(x int, y int) int {
+
+	return x + y
+}
+
+type mile uint
+type kilometer uint
+
+func distanceToEnemy(distance mile) {
+
+	fmt.Println("расстояние до противника:")
+	fmt.Println(distance, "миль")
+}
+
+func main() {
+
+	var myOperation BinaryOp = add
+	action(10, 35, myOperation)
+	var distance mile = 5
+	distanceToEnemy(distance)
+	type mile uint
+	type kilometer uint
+
+}

@@ -1,0 +1,26 @@
+package main
+
+import "fmt"
+
+type person struct {
+	name string
+	age  int
+}
+
+func main() {
+
+	var Michael person = person{name: "Michael", age: 22}
+	fmt.Println(Michael)
+	fmt.Println("возраст: ", Michael.age)
+	fmt.Println("Имя: ", Michael.name)
+
+	Michael.age = 23
+	fmt.Println("В следующем году будет: ", Michael.age)
+
+	var p_michael *person = &Michael
+	fmt.Println(p_michael.name)
+
+	brother := Michael
+	brother.age = 0
+	fmt.Println("Возраст брата: ", brother.age, "- брата нет")
+}
