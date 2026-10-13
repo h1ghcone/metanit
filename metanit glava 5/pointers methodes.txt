@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+type person struct {
+	name string
+	age  int
+}
+
+func (p *person) update_age(new_age int) {
+	p.age = new_age
+}
+
+func main() {
+
+	var Michael = person{name: "Michael", age: 22}
+	var p_tom *person = &Michael
+	fmt.Println("возраст сейчас: ", Michael.age)
+	p_tom.update_age(27)
+	fmt.Println("возраст через 5 лет: ", Michael.age)
+}

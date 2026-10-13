@@ -1,0 +1,19 @@
+package main
+
+import "fmt"
+
+type library []string
+
+func (l library) Println() {
+
+	for _, val := range l {
+
+		fmt.Println(val)
+	}
+}
+
+func main() {
+	fmt.Println("Книги которые нужно прочиать летом:")
+	var lib library = library{"Отцы и дети", "Война и мир", "Горе от ума"}
+	lib.Println()
+}

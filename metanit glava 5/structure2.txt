@@ -1,0 +1,30 @@
+package main
+
+import "fmt"
+
+type person struct {
+	name string
+	age  int
+}
+
+type account struct {
+	login    string
+	password string
+
+	person_info person
+}
+
+func main() {
+
+	Michael := account{
+		login:    "Michael@mail.ru",
+		password: "qwerty",
+		person_info: person{
+			name: "Michael",
+			age:  22,
+		},
+	}
+
+	fmt.Println(Michael)
+	fmt.Println("Name: ", Michael.person_info.name)
+}
